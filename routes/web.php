@@ -12,39 +12,6 @@ use Illuminate\Support\Facades\Route;
 | contains the "web" middleware group. Now create something great!
 |
 */
-
-Route::get('/', function () {
-    return view('welcome');
-});
-
-Route::get("/about-me", function () {
-    return "Nama Saya <b>Dio Setiyawan</b>";
-});
-
-Route::get("/satu", function () {
-    return "Ini adalah <b>Satu</b>";
-});
-
-Route::get("/dua", function () {
-    return "Ini adalah <b>Dua</b>";
-});
-
-Route::get("/tiga", function () {
-    return "Ini adalah <b>Tiga</b>";
-});
-
-Route::get("/empat", function () {
-    return "Ini adalah <b>Empat</b>";
-});
-
-Route::get("/lima", function () {
-    return "Ini adalah <b>Lima</b>";
-});
-
-Route::get('/testing-view', function () {
-    return view('view-1');
-});
-
 use App\Http\Controllers\UtamaController;
 
 Route::get("/utama/test", [UtamaController::class, "test"]);

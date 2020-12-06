@@ -14,16 +14,11 @@ use Illuminate\Support\Facades\Route;
 */
 use App\Http\Controllers\UtamaController;
 
-Route::get("/utama/test", [UtamaController::class, "test"]);
+Route::get("/home", [UtamaController::class, "home"])->name("home");
+Route::get("/survei", [UtamaController::class, "survei"])->name("survei");
+Route::get("/biodata", [UtamaController::class, "biodata"])->name("biodata");
+Route::get("/tentang", [UtamaController::class, "tentang"])->name("tentang");
+Route::get("/kontak", [UtamaController::class, "kontak"])->name("kontak");
 
-use App\Http\Controllers\ControllerSatu;
-
-Route::get("/utama/url1", [ControllerSatu::class, "method1"]);
-Route::get("/utama/url2", [ControllerSatu::class, "method2"]);
-Route::get("/utama/url3", [ControllerSatu::class, "method3"]);
-
-use App\Http\Controllers\ControllerDua;
-
-Route::get("/utama/url4", [ControllerDua::class, "method4"]);
-Route::get("/utama/url5", [ControllerDua::class, "method5"]);
-Route::get("/utama/url6", [ControllerDua::class, "method6"]);
+Route::post("/proses", [UtamaController::class, "proses"])->name("survei_proses");
+Route::post("/kirim", [UtamaController::class, "kirim"])->name("biodata_kirim");
